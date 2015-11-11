@@ -41,8 +41,9 @@ $(document).ready(function(){
 			}
 		}
 	}
-	// console.log(teamOGMatches)
-	// console.log(teamOGMatchIds)
+	
+
+
 	for(var matchIdIndex = 0; matchIdIndex < teamOGMatchIds.length; matchIdIndex++){
 		var foundIdIndex = ogMatchIds.indexOf(teamOGMatchIds[matchIdIndex]);
 		if(foundIdIndex != -1){
@@ -51,10 +52,7 @@ $(document).ready(function(){
 			console.log(teamOGMatchIds[matchIdIndex])
 		}
 	}
-	console.log(ogMatchIds);
-	for( matchIdIndex = 0; matchIdIndex < ogMatchIds.length; matchIdIndex++ ){
-		console.log("www.dotabuff.com/matches/" + ogMatchIds[matchIdIndex])
-	}
+	
 
 
 });

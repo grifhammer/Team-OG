@@ -1,0 +1,12 @@
+API CALLS
+
+Get OG team info
+Get get leagues
+get league matches
+get hero list
+
+get hero images
+
+get live games
+
+get player profiles
