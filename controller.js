@@ -1,14 +1,20 @@
 var OGApp = angular.module('OGApp', ['ngRoute'])
 
 OGApp.controller('mainController', function($scope, $http){
+	var localApiBaseUrl = 'fakeJSON/'
+	var steamAPIBaseUrl = 'https://api.steampowered.com'
+
+	var dotaApiUrl = 'IDOTA2Match_570/'
+	var steamProfileBase = 'ISteamUser/'
+	var steamProfileOptions = 'GetPlayerSummaries/v002'
+	var steamProfileUrl = steamProfileBase + steamProfileOptions
+
+
+	$scope.OGMatches = []
 
 });
 
 $(document).ready(function(){
-	var localApiBaseUrl = 'fakeJSON/';
-
-	var steamApiBaseUrl = 'https://api.steampowered.com/'
-	var dotaApiUrl = 'IDOTA2Match_570/'
 
 	var getLeagueUrl = 'getleaguelisting/';
 	var getMatchesUrl = "getmatchlisting/";
