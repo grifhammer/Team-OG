@@ -1,8 +1,20 @@
+var OGApp = angular.module('OGApp', ['ngRoute'])
+
+OGApp.controller('mainController', function($scope, $http){
+
+});
+
 $(document).ready(function(){
-	var steamApiBaseUrl = 'https://api.steampowered.com/';
-	var getTeamInfo = 'IDOTA2Match_570/GetTeamInfoByTeamID/v001/';
-	var getMatchesUrl = "IDOTA2Match_570/GetMatchHistory/v001/";
-	var apiKeyUrl = '?key=' + apiKey;
+	var localApiBaseUrl = 'fakeJSON/';
+
+	var steamApiBaseUrl = 'https://api.steampowered.com/'
+	var dotaApiUrl = 'IDOTA2Match_570/'
+
+	var getLeagueUrl = 'getleaguelisting/';
+	var getMatchesUrl = "getmatchlisting/";
+	var getTeamInfoUrl = ''
+	var apiKeyUrl = '&key=' + apiKey;
+	var languageUrl = "language=en_us"
 	var format = '&format=json';
 
 	var teamOGId = "2586976";
@@ -13,14 +25,16 @@ $(document).ready(function(){
 	var numRequestedTeams = 1;
 	var numTeamsRequestedUrl = '&teams_requested=' + numRequestedTeams;
 
-	var steamApiCall = steamApiBaseUrl + getTeamInfo + apiKeyUrl + startingTeamUrl + numTeamsRequestedUrl;
+	var steamApiCall = steamApiBaseUrl + getTeamInfoUrl + apiKeyUrl + startingTeamUrl + numTeamsRequestedUrl;
+
+	steamApiCall = steamApiBaseUrl + "getheroes/" + apiKeyUrl + languageUrl
 
 	var teamJsonResults = getFakeJson(steamApiCall);
 
 	var teamOGIds = []
 	var teamOGMatchIds = [];
 
-	teamOGIds = getTeamIds(teamJsonResults);
+	// teamOGIds = getTeamIds(teamJsonResults);
 
 
 
@@ -28,35 +42,35 @@ $(document).ready(function(){
 
 
 	
-	//get the matches from leagues they play in
-	for(var leagueIndex = 0; leagueIndex < teamOGLeagues.length; leagueIndex++){
-		var leagueId = teamOGLeagues[leagueIndex].leagueid;
-		var leagueIdUrl = '&league_id=' + leagueId;
-		steamApiCall = steamApiBaseUrl + getMatchesUrl + apiKeyUrl + leagueIdUrl;
+	// //get the matches from leagues they play in
+	// for(var leagueIndex = 0; leagueIndex < teamOGLeagues.length; leagueIndex++){
+	// 	var leagueId = teamOGLeagues[leagueIndex].leagueid;
+	// 	var leagueIdUrl = '&league_id=' + leagueId;
+	// 	steamApiCall = steamApiBaseUrl + getMatchesUrl + apiKeyUrl + leagueIdUrl;
 
 
-		leagueMatchesJSON = getFakeJson(steamApiCall);
-		for(var teamIdIndex = 0; teamIdIndex < teamOGIds.length; teamIdIndex++){
-			teamOGId = teamOGIds[teamIdIndex];
-			var leagueMatches = leagueMatchesJSON.result.matches;
-			var teamOGMatchObj = findGamesPlayedByTeamID(teamOGIds[teamIdIndex], leagueMatches);
-			teamOGIds = teamOGMatchObj.matchIds;
-			teamOGMatches = teamOGMatchObj.matches;
-			//get match IDs for matches that they actually played in
+	// 	leagueMatchesJSON = getFakeJson(steamApiCall);
+	// 	for(var teamIdIndex = 0; teamIdIndex < teamOGIds.length; teamIdIndex++){
+	// 		teamOGId = teamOGIds[teamIdIndex];
+	// 		var leagueMatches = leagueMatchesJSON.result.matches;
+	// 		var teamOGMatchObj = findGamesPlayedByTeamID(teamOGIds[teamIdIndex], leagueMatches);
+	// 		teamOGIds = teamOGMatchObj.matchIds;
+	// 		teamOGMatches = teamOGMatchObj.matches;
+	// 		//get match IDs for matches that they actually played in
 			
-		}
-	}
+	// 	}
+	// }
 
 
 
-	for(var matchIdIndex = 0; matchIdIndex < teamOGMatchIds.length; matchIdIndex++){
-		var foundIdIndex = ogMatchIds.indexOf(teamOGMatchIds[matchIdIndex]);
-		if(foundIdIndex != -1){
-			ogMatchIds.splice(foundIdIndex,1);
-		} else{
-			console.log(teamOGMatchIds[matchIdIndex])
-		}
-	}
+	// for(var matchIdIndex = 0; matchIdIndex < teamOGMatchIds.length; matchIdIndex++){
+	// 	var foundIdIndex = ogMatchIds.indexOf(teamOGMatchIds[matchIdIndex]);
+	// 	if(foundIdIndex != -1){
+	// 		ogMatchIds.splice(foundIdIndex,1);
+	// 	} else{
+	// 		console.log(teamOGMatchIds[matchIdIndex])
+	// 	}
+	// }
 	
 
 	function getTeamIds(teamJson){
