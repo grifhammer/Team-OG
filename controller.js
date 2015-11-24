@@ -2,19 +2,26 @@ var OGApp = angular.module('OGApp', ['ngRoute'])
 
 OGApp.controller('matchController', function($scope, $http){
 	var localApiBaseUrl = ''
-	var steamAPIBaseUrl = 'https://api.steampowered.com/'
+	var steamAPIBaseUrl = '../steamapi/'
 
-	var dotaApiUrl = 'IDOTA2Match_570/'
-	var steamProfileBase = 'ISteamUser/'
-	var steamProfileOptions = 'GetPlayerSummaries/v002'
-	var getLeagueUrl = 'GetLeagueListing/v001/'
-	var apiKeyUrl = '?key=' + apiKey;
-	var steamApiCall = steamAPIBaseUrl + dotaApiUrl + getLeagueUrl + apiKeyUrl;
+	var getLeagueUrl = 'getleaguelisting/'
+	var getMatchUrl = 'getmatchlisting/'
+	var getItemsUrl = 'itemlist/'
+	var getHeroesUrl = 'getheroes/'
+	var leagueId = '342'
+	var steamApiCall = steamAPIBaseUrl + getLeagueUrl + leagueIdUrl(leagueId);
 
 
 	$scope.OGMatches = []
-	$http.get(steamApiCall).success(function(steamData){
+	$http.get(buildLeagueUrl(leagueId)).success(function(steamData){
 		console.log(steamData);
 	});
+
+	var buildLeagueUrl = function(inputLeagueId){
+		var leagueIdUrl = function(inputLeagueId){
+			return '?league_id=' + inputLeagueId;
+		}
+		return steamAPIBaseUrl + getLeagueUrl + leagueIdUrl(inputLeagueId);
+	}
 
 });
