@@ -560,4 +560,6 @@ var heroes = [
 }
 ]
 
-heroes = heroes[0].result.heroes;
+heroes = heroes[0].result.heroes.sort(function(a, b){
+	return a.id - b.id
+});
