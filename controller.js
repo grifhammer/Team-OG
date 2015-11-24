@@ -15,8 +15,8 @@ OGApp.controller('matchController', function($scope, $http){
 		console.log(steamData);
 	});
 
-	var buildLeagueUrl = function(inputLeagueId){
-		var leagueIdUrl = function(inputLeagueId){
+	function buildLeagueUrl (inputLeagueId){
+		function leagueIdUrl (inputLeagueId){
 			return '?league_id=' + inputLeagueId;
 		}
 		return steamAPIBaseUrl + getLeagueUrl + leagueIdUrl(inputLeagueId);
