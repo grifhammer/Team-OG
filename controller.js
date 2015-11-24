@@ -13,8 +13,8 @@ OGApp.controller('matchController', function($scope, $http){
 
 
 	$scope.OGMatches = []
-	$http.get(steamApiCall, function(steamData){
+	$http.get(steamApiCall).success(function(steamData){
 		console.log(steamData);
-	})
+	});
 
 });
