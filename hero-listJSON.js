@@ -563,9 +563,11 @@ var heroes = [
 heroes = heroes[0].result.heroes.sort(function(a, b){
 	return a.id - b.id
 });
-
-heroes.unshift({
+var buffer = {
 	name: "offset",
 	id: '0',
 	localized_name: 'none'
-})
+}
+heroes.unshift(buffer)
+heroes.splice(24, 0, buffer);
+heroes.splice(108, 0, buffer);
