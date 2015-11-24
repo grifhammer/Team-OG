@@ -38,9 +38,10 @@ OGApp.controller('matchController', function($scope, $http){
 					$scope.OGMatches.push(matchList[matchIndex]);
 				}
 			}
+			console.log($scope.OGMatches)
 		});
 	};
-	console.log($scope.OGMatches)
+	
 	$scope.heroes = heroes
 	
 	
