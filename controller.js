@@ -38,10 +38,9 @@ OGApp.controller('matchController', function($scope, $http){
 					$scope.OGMatches.push(matchList[matchIndex]);
 				}
 			}
-			console.log(steamData);
 		});
 	};
-	console.log(heroes)
+	console.log($scope.OGMatches)
 	$scope.heroes = heroes
 	
 	
