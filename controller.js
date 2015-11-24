@@ -23,10 +23,14 @@ OGApp.controller('matchController', function($scope, $http){
 
 
 	$scope.OGMatches = []
-	$http.get(buildLeagueUrl(leagueId)).success(function(steamData){
-		console.log(steamData);
+	for(var i = 0; i < teamOGLeagues.length; i++){
+		leagueId = teamOGLeagues[i].leagueId;
+		$http.get(buildLeagueUrl(leagueId)).success(function(steamData){
+			console.log(steamData);
+		}
 	});
-
+	
+	
 	
 
 });
