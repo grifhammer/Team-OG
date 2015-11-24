@@ -560,4 +560,4 @@ var heroes = [
 }
 ]
 
-heroes = heroes.result;
+heroes = heroes[0].result.heroes;
