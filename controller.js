@@ -41,6 +41,7 @@ OGApp.controller('matchController', function($scope, $http){
 			console.log(steamData);
 		});
 	};
+	console.log(heroes)
 	
 	
 	
