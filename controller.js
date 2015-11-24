@@ -58,6 +58,6 @@ OGApp.directive('heroImg', function () {
    		},
    		link: function (scope, element, attrs) {
        		attrs.$set('src', heroes[heroSrc])
-   		};
-	}
+   		}
+	};
 });
