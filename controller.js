@@ -28,7 +28,7 @@ OGApp.controller('matchController', function($scope, $http){
 		$http.get(buildLeagueUrl(leagueId)).success(function(steamData){
 			console.log(steamData);
 		});
-	});
+	};
 	
 	
 	
