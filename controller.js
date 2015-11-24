@@ -9,8 +9,6 @@ OGApp.controller('matchController', function($scope, $http){
 	var getItemsUrl = 'itemlist/'
 	var getHeroesUrl = 'getheroes/'
 	var leagueId = '342'
-	var steamApiCall = steamAPIBaseUrl + getLeagueUrl + leagueIdUrl(leagueId);
-
 
 	$scope.OGMatches = []
 	$http.get(buildLeagueUrl(leagueId)).success(function(steamData){
