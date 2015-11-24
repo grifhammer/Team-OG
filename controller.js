@@ -52,7 +52,7 @@ OGApp.controller('matchController', function($scope, $http){
 
 OGApp.directive('heroSrc', function () {
    	return{ 
-   		restrict: 'A',
+   		restrict: 'E',
    		scope: {
    			heroSrc: '='
    		}
