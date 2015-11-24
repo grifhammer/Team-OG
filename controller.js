@@ -42,8 +42,22 @@ OGApp.controller('matchController', function($scope, $http){
 		});
 	};
 	console.log(heroes)
+	$scope.heroes = heroes
 	
 	
 	
 
+});
+
+
+OGApp.directive('heroSrc', function () {
+   	return{ 
+   		restrict: 'A',
+   		scope: {
+   			heroSrc: '='
+   		}
+   		link: function (scope, element, attrs) {
+       		attrs.$set('src', heroes[heroSrc])
+   		};
+	}
 });
