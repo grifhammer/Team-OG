@@ -42,10 +42,6 @@ OGApp.controller('matchController', function($scope, $http){
 		});
 	};
 	console.log(heroes)
-	for(var heroIndex = 0; heroIndex < heroes.length; i++){
-		console.log(/npc_hero_dota_(.+)/.match(heroes[heroIndex].name))
-		// heroes[heroIndex].name = /npc_hero_dota_(.+)/.match(heroes[heroIndex].name)
-	}
 	$scope.heroes = heroes
 	
 	
