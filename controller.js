@@ -8,7 +8,7 @@ OGApp.controller('matchController', function($scope, $http){
 	var steamProfileBase = 'ISteamUser/'
 	var steamProfileOptions = 'GetPlayerSummaries/v002'
 	var getLeagueUrl = 'GetLeagueListing/v001/'
-	var apiKeyUrl = '?apiKey=' + apiKey;
+	var apiKeyUrl = '?key=' + apiKey;
 	var steamApiCall = steamAPIBaseUrl + dotaApiUrl + getLeagueUrl + apiKeyUrl;
 
 
