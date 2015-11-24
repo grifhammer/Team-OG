@@ -2,7 +2,7 @@ var OGApp = angular.module('OGApp', ['ngRoute'])
 
 OGApp.controller('matchController', function($scope, $http){
 	
-
+	var teamOGId = 2586976;
 	var localApiBaseUrl = ''
 	var steamAPIBaseUrl = '../steamapi/'
 
@@ -31,6 +31,13 @@ OGApp.controller('matchController', function($scope, $http){
 	for(var i = 0; i < teamOGLeagues.length; i++){
 		leagueId = teamOGLeagues[i].leagueid;
 		$http.get(buildMatchUrl(leagueId)).success(function(steamData){
+			var matchList = steamData.result.matches;
+			for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
+				if( matchList[matchIndex].dire_team_id == teamOGId ||
+					matchList[matchIndex].radiant_team_id == teamOGId){
+					$scope.OGMatches.push(matchList[matchIndex]);
+				}
+			}
 			console.log(steamData);
 		});
 	};
