@@ -56,7 +56,7 @@ OGApp.directive('heroImg', function () {
    		scope: {
    			heroSrc: '='
    		},
-   		template: '<img src="'{{heroes[heroSrc]}}'">',
+   		template: '<img src="' + {{heroes[heroSrc]}} + '">',
    		controller: function($scope){
 
    		}
