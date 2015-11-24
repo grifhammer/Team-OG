@@ -2,7 +2,7 @@ var OGApp = angular.module('OGApp', ['ngRoute'])
 
 OGApp.controller('matchController', function($scope, $http){
 	var localApiBaseUrl = ''
-	var steamAPIBaseUrl = '/steamapi/'
+	var steamAPIBaseUrl = 'https://api.steampowered.com/'
 
 	var dotaApiUrl = 'IDOTA2Match_570/'
 	var steamProfileBase = 'ISteamUser/'
