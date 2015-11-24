@@ -50,12 +50,12 @@ OGApp.controller('matchController', function($scope, $http){
 });
 
 
-OGApp.directive('heroSrc', function () {
+OGApp.directive('heroImg', function () {
    	return{ 
    		restrict: 'E',
    		scope: {
    			heroSrc: '='
-   		}
+   		},
    		link: function (scope, element, attrs) {
        		attrs.$set('src', heroes[heroSrc])
    		};
