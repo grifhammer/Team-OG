@@ -48,17 +48,3 @@ OGApp.controller('matchController', function($scope, $http){
 	
 
 });
-
-
-// OGApp.directive('heroImg', function () {
-//    	return{ 
-//    		restrict: 'E',
-//    		scope: {
-//    			heroSrc: '='
-//    		},
-//    		template: '<img src="' + {{heroes[heroSrc]}} + '">',
-//    		controller: function($scope){
-
-//    		}
-// 	};
-// });
