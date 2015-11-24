@@ -64,6 +64,9 @@ var teamOGLeagues = [
 }
 ];
 
+//splice down leagues to just have Frankfurt Major
+teamOGLeagues = teamOGLeagues.splice(3,1);
+
 var ogMatchIds = [
 1924109491,
 1924058157,
