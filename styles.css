@@ -3,7 +3,7 @@
 }
 
 .radiant{
-	color: green;
+	color: #243E36;
 }
 
 .dire-wrapper{
@@ -21,4 +21,7 @@
 
 .player-wrapper{
 	overflow: hidden;
+}
+body{
+	background-color: #7CA982;
 }
