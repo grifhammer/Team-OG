@@ -1,0 +1,24 @@
+.radiant-wrapper{
+	overflow: hidden;
+}
+
+.radiant{
+	color: green;
+}
+
+.dire-wrapper{
+	overflow: hidden;
+}
+
+.dire{
+	color: red;
+}
+
+.player{
+	float: left;
+	margin: 5px;
+}
+
+.player-wrapper{
+	overflow: hidden;
+}
