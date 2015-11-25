@@ -32,7 +32,7 @@ OGApp.controller('matchController', function($scope, $http){
 	}
 
 	$http.get(getTeamOGInfoUrl()).success(function(teamData){
-		$scope.teamOG = teamData[0];
+		$scope.teamOG = teamData;
 		console.log($scope.teamOG)
 	});
 
@@ -47,7 +47,6 @@ OGApp.controller('matchController', function($scope, $http){
 					$scope.OGMatches.push(matchList[matchIndex]);
 				}
 			}
-			console.log($scope.OGMatches)
 		});
 	};
 
