@@ -14,38 +14,44 @@
 	<script type="text/javascript" src='controller.js'></script>
 </head>
 <body ng-controller='matchController'>
-	<div class="og-match" ng-repeat="match in OGMatches">
-		<h2>{{match.match_id}}</h2>
 
-		<div class="radiant-wrapper radiant">
-			<h3>Radiant</h3>
-			<div class="radiant player-wrapper">
-				<div class="player" ng-repeat="player in radiantPlayers(match.players)">
-					<div class="player-info">
-						<h4>Player Name: {{player.account_id}}</h4>
-						<h4>Hero: {{heroes[player.hero_id].localized_name}}</h4>
+	<div class="site-wrapper">
+		<div id="#og-header">
+			<h1>Team OG</h1>
+			<img ng-src="{{}}">
+		</div>
+		<div class="og-match" ng-repeat="match in OGMatches">
+			<h2>{{match.match_id}}</h2>
+
+			<div class="radiant-wrapper radiant">
+				<h3>Radiant</h3>
+				<div class="radiant player-wrapper">
+					<div class="player" ng-repeat="player in radiantPlayers(match.players)">
+						<div class="player-info">
+							<h4>Player Name: {{player.account_id}}</h4>
+							<h4>Hero: {{heroes[player.hero_id].localized_name}}</h4>
+						</div>
+						<div class="hero-image-wrapper">
+							<img ng-src="http://cdn.dota2.com/apps/dota2/images/heroes/{{heroes[player.hero_id].name}}_lg.png">
+						</div>
 					</div>
-					<div class="hero-image-wrapper">
-						<img ng-src="http://cdn.dota2.com/apps/dota2/images/heroes/{{heroes[player.hero_id].name}}_lg.png">
+				</div>
+			</div>
+			<div class="dire-wrapper dire">
+				<h3>Dire</h3>
+				<div class="dire player-wrapper">
+					<div class="player" ng-repeat="player in direPlayers(match.players)">
+						<div class="player-info">
+							<h4>Player Name: {{player.account_id}}</h4>
+							<h4>Hero: {{heroes[player.hero_id].localized_name}}</h4>
+						</div>
+						<div class="hero-image-wrapper">
+							<img ng-src="http://cdn.dota2.com/apps/dota2/images/heroes/{{heroes[player.hero_id].name}}_lg.png">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="dire-wrapper dire">
-			<h3>Dire</h3>
-			<div class="dire player-wrapper">
-				<div class="player" ng-repeat="player in direPlayers(match.players)">
-					<div class="player-info">
-						<h4>Player Name: {{player.account_id}}</h4>
-						<h4>Hero: {{heroes[player.hero_id].localized_name}}</h4>
-					</div>
-					<div class="hero-image-wrapper">
-						<img ng-src="http://cdn.dota2.com/apps/dota2/images/heroes/{{heroes[player.hero_id].name}}_lg.png">
-					</div>
-				</div>
-			</div>
-		</div>
-
 	</div>
 </body>
 </html>

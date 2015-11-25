@@ -9,10 +9,14 @@ OGApp.controller('matchController', function($scope, $http){
 	var getLeagueUrl = 'getleaguelisting/'
 	var getMatchUrl = 'getmatchlisting/'
 	var getItemsUrl = 'itemlist/'
+	var getTeamUrl = 'GetTeamInfoByTeamID/'
 	var getHeroesUrl = 'getheroes/'
 	var leagueId = '342'
 
-
+	function getTeamOGInfoUrl (){
+		var teamOGRequestUrl = '?start_at_team_id=' + teamOGId;
+		return steamAPIBaseUrl + getTeamUrl + teamOGRequestUrl;
+	}
 
 	function buildLeagueUrl (inputLeagueId){
 		function leagueIdUrl (inputLeagueId){
@@ -26,6 +30,11 @@ OGApp.controller('matchController', function($scope, $http){
 		}
 		return steamAPIBaseUrl + getMatchUrl + leagueIdUrl(inputLeagueId);
 	}
+
+	$http.get(getTeamOGInfoUrl()).success(function(teamData){
+		$scope.teamOG = teamData[0];
+		console.log($scope.teamOG)
+	});
 
 	$scope.OGMatches = []
 	for(var i = 0; i < teamOGLeagues.length; i++){
