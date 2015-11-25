@@ -43,13 +43,11 @@ OGApp.controller('matchController', function($scope, $http){
 	};
 
 	$scope.radiantPlayers = function(playerArray){
-		console.log(playerArray.slice(0,4))
-		return playerArray.slice(0,4);
+		return playerArray.slice(0,5);
 	}
 
 	$scope.direPlayers = function(playerArray){
-		console.log(playerArray.slice(5,9))
-		return playerArray.slice(5,9)
+		return playerArray.slice(5)
 	}
 	
 	$scope.heroes = heroes
