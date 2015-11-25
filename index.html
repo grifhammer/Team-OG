@@ -18,7 +18,7 @@
 			<div class="radiant hero-images">
 				<div class="hero" ng-repeat="player in match.players"> 
 					Hero: {{heroes[player.hero_id].localized_name}}
-					<img ng-src="http://cdn.dota2.com/apps/dota2/images/heroes/{{heroes[match.players[0].hero_id].name}}_lg.png">
+					<img ng-src="http://cdn.dota2.com/apps/dota2/images/heroes/{{heroes[player.hero_id].name}}_lg.png">
 					
 				</div>
 			</div>
@@ -26,8 +26,8 @@
 		<div class="dire-wrapper dire">
 			<div class="dire hero-images">
 				<div class="hero" ng-repeat="player in match.players">
-					Hero: {{heroes[match.players[5].hero_id].localized_name}}
-					<img ng-src="http://cdn.dota2.com/apps/dota2/images/heroes/{{heroes[match.players[5].hero_id].name}}_lg.png">
+					Hero: {{heroes[player.hero_id].localized_name}}
+					<img ng-src="http://cdn.dota2.com/apps/dota2/images/heroes/{{heroes[player.hero_id].name}}_lg.png">
 				</div>
 			</div>
 		</div>
