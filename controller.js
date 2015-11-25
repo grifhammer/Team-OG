@@ -43,10 +43,12 @@ OGApp.controller('matchController', function($scope, $http){
 	};
 
 	$scope.radiantPlayers = function(playerArray){
+		console.log(playerArray.splice(0,5))
 		return playerArray.splice(0,5);
 	}
 
 	$scope.direPlayers = function(playerArray){
+		console.log(playerArray.splice(5,5))
 		return playerArray.splice(5,5)
 	}
 	
