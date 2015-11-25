@@ -30,9 +30,8 @@ OGApp.controller('matchController', function($scope, $http){
 		}
 		return steamAPIBaseUrl + getMatchUrl + leagueIdUrl(inputLeagueId);
 	}
-	console.log(getTeamOGInfoUrl())
 	$http.get(getTeamOGInfoUrl()).success(function(teamData){
-		$scope.teamOG = teamData;
+		$scope.teamOG = teamData.result.teams[0];
 		console.log($scope.teamOG)
 	});
 
