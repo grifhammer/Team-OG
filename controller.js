@@ -41,6 +41,14 @@ OGApp.controller('matchController', function($scope, $http){
 			console.log($scope.OGMatches)
 		});
 	};
+
+	$scope.radiantPlayers = function(playerArray){
+		return playerArray.splice(0,5);
+	}
+
+	$scope.direPlayers = function(playerArray){
+		return playerArray.splice(5,5)
+	}
 	
 	$scope.heroes = heroes
 	
