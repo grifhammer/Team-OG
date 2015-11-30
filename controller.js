@@ -31,16 +31,9 @@ OGApp.controller('matchController', function($scope, $http){
 		return steamAPIBaseUrl + getMatchUrl + leagueIdUrl(inputLeagueId);
 	}
 
-	function changePlayerNames(sideToChange, match){
-		var indexStart;
-		var indexEnd;
-		if(sideToChange == 'dire'){
-			indexStart = 5;
-			indexEnd = 9;
-		} else if(sideToChange == 'radiant'){
-			indexStart = 0;
-			indexEnd = 4;
-		}
+	function changePlayerNames(match){
+		var indexStart = 0;
+		var indexEnd = 9;
 		for(var playerIndex = indexStart; playerIndex <= indexEnd; playerIndex++){
 			var currPlayer = match.players[playerIndex];
 			console.log(currPlayer);
@@ -73,11 +66,11 @@ OGApp.controller('matchController', function($scope, $http){
 				for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
 					if( matchList[matchIndex].dire_team_id == teamOGId){
 						matchList[matchIndex].isOGDire = true;
-						$scope.OGMatches.push(changePlayerNames("dire", matchList[matchIndex]));
+						$scope.OGMatches.push(changePlayerNames(matchList[matchIndex]));
 					}
 					if( matchList[matchIndex].radiant_team_id == teamOGId){
 						matchList[matchIndex].isOGDire = false;
-						$scope.OGMatches.push(changePlayerNames("radiant", matchList[matchIndex]));
+						$scope.OGMatches.push(changePlayerNames(matchList[matchIndex]));
 					}
 				}
 			}
