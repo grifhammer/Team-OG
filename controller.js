@@ -73,11 +73,11 @@ OGApp.controller('matchController', function($scope, $http){
 				for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
 					if( matchList[matchIndex].dire_team_id == teamOGId){
 						matchList[matchIndex].isOGDire = true;
-						$scope.OGMatches.push(changePlayerNames(dire, matchList[matchIndex]));
+						$scope.OGMatches.push(changePlayerNames("dire", matchList[matchIndex]));
 					}
 					if( matchList[matchIndex].radiant_team_id == teamOGId){
 						matchList[matchIndex].isOGDire = false;
-						$scope.OGMatches.push(changePlayerNames(radiant, matchList[matchIndex]));
+						$scope.OGMatches.push(changePlayerNames("radiant", matchList[matchIndex]));
 					}
 				}
 			}
