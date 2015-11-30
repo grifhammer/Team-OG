@@ -30,6 +30,29 @@ OGApp.controller('matchController', function($scope, $http){
 		}
 		return steamAPIBaseUrl + getMatchUrl + leagueIdUrl(inputLeagueId);
 	}
+
+	function changePlayerNames(sideToChange, match){
+		var indexStart;
+		var indexEnd;
+		if(sideToChange == 'dire'){
+			indexStart = 5;
+			indexEnd = 9;
+		} else if(sideToChange == 'radiant'){
+			indexStart = 0;
+			indexEnd = 4;
+		}
+		for(var playerIndex = indexStart; playerIndex < indexEnd; playerIndex++){
+			var currPlayer = match.players[playerIndex];
+			console.log(currPlayer);
+			for(var i = 0; i < knownPlayerList.length; i++){
+				if(currPlayer.id == knownPlayerList[i][0]){
+					match.players[playerIndex] = knownPlayerList[i][1];
+				}
+			}
+			
+		}
+		return match;
+	}
 	$http.get(getTeamOGInfoUrl()).success(function(teamData){
 		if(teamData == ''){
 			console.log("Got empty team JSON")
@@ -50,18 +73,17 @@ OGApp.controller('matchController', function($scope, $http){
 				for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
 					if( matchList[matchIndex].dire_team_id == teamOGId){
 						matchList[matchIndex].isOGDire = true;
-						console.log(matchList[matchIndex]);
-						$scope.OGMatches.push(matchList[matchIndex]);
+						$scope.OGMatches.push(changePlayerNames(dire, matchList[matchIndex]));
 					}
 					if( matchList[matchIndex].radiant_team_id == teamOGId){
 						matchList[matchIndex].isOGDire = false;
-						console.log(matchList[matchIndex]);
-						$scope.OGMatches.push(matchList[matchIndex]);
+						$scope.OGMatches.push(changePlayerNames(radiant, matchList[matchIndex]));
 					}
 				}
 			}
 		});
 	};
+
 
 	$scope.radiantPlayers = function(playerArray){
 		return playerArray.slice(0,5);
