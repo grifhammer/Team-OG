@@ -45,7 +45,7 @@ OGApp.controller('matchController', function($scope, $http){
 			var currPlayer = match.players[playerIndex];
 			console.log(currPlayer);
 			for(var i = 0; i < knownPlayerList.length; i++){
-				if(currPlayer.id == knownPlayerList[i][0]){
+				if(currPlayer.account_id == knownPlayerList[i][0]){
 					match.players[playerIndex] = knownPlayerList[i][1];
 				}
 			}
