@@ -2,7 +2,7 @@
 <html ng-app="OGApp">
 <head>
 	<title>Steam API</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
@@ -14,15 +14,15 @@
 </head>
 <body ng-controller='matchController'>
 
-	<div class="site-wrapper">
-		<div id="#og-header">
+	<div id="site-wrapper">
+		<div id="og-header">
 			<h1>{{teamOG.name}}</h1>
 			<img src="assets/images/team_OG_logo.png">
 		</div>
 		<div class="og-match" ng-repeat="match in OGMatches">
 			<h2>{{match.match_id}}</h2>
 
-			<div class="radiant-wrapper radiant">
+			<div class="side-wrapper radiant">
 				<h3>Radiant</h3>
 				<div class="radiant player-wrapper">
 					<div class="player" ng-repeat="player in radiantPlayers(match.players)">
@@ -36,7 +36,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="dire-wrapper dire">
+			<div class="side-wrapper dire">
 				<h3>Dire</h3>
 				<div class="dire player-wrapper">
 					<div class="player" ng-repeat="player in direPlayers(match.players)">

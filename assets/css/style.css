@@ -1,1 +1,21 @@
-
+/* line 4, ../compass/sass/style.scss */
+body {
+  background-color: #7CA982;
+}
+/* line 16, ../compass/sass/style.scss */
+body #site-wrapper .og-match .side-wrapper {
+  overflow: hidden;
+}
+/* line 18, ../compass/sass/style.scss */
+body #site-wrapper .og-match .side-wrapper .player {
+  float: left;
+  margin: 5px;
+}
+/* line 33, ../compass/sass/style.scss */
+body #site-wrapper .og-match .radiant {
+  color: #243E36;
+}
+/* line 37, ../compass/sass/style.scss */
+body #site-wrapper .og-match .dire {
+  color: #CAFFB9;
+}

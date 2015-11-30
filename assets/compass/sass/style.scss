@@ -1,0 +1,42 @@
+$radiantTextColor: #243E36;
+$direTextColor: #CAFFB9;
+$background-color: #7CA982;
+body{
+	background-color: $background-color;
+#site-wrapper{
+	#og-header{
+		h1{
+
+		}
+		img{
+
+		}
+	}
+	.og-match{
+		.side-wrapper{
+			overflow: hidden;
+			.player{
+				float: left;
+				margin: 5px;
+				.player-info{
+					h4{
+
+					}
+				}
+				.hero-image-wrapper{
+					img{
+
+					}
+				}
+			}
+		}
+		.radiant{
+			color: $radiantTextColor;
+
+		}
+		.dire{
+			color: $direTextColor;
+		}
+	}
+}
+}
