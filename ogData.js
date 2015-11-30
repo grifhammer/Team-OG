@@ -74,7 +74,15 @@ var knownPlayerList = [ [94155156, "Fly"],
 						[43276219, "EternalEnvy"],
 						[86700461, "w33haa"],
 						[87382579, "Misery"],
-						[6922000, "pieliedie"] ];
+						[6922000, "pieliedie"],
+						[86727555, "ppd"],
+						[111620041, "Suma1l"],
+						[87276347, "Universe"],
+						[87177591, "Fear"],
+						[86745912, "Arteezy"],
+						[86802844, "Mag"],
+						[92423451, "Black^"],
+						[86802844, "Ohaiyo"] ];
 
 
 //splice down leagues to just have Frankfurt Major
