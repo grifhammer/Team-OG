@@ -41,8 +41,13 @@ OGApp.controller('matchController', function($scope, $http){
 		$http.get(buildMatchUrl(leagueId)).success(function(steamData){
 			var matchList = steamData.result.matches;
 			for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
-				if( matchList[matchIndex].dire_team_id == teamOGId ||
-					matchList[matchIndex].radiant_team_id == teamOGId){
+				if( matchList[matchIndex].dire_team_id == teamOGId){
+					matchList[matchIndex].isOGDire = true;
+					console.log(matchList[matchIndex]);
+					$scope.OGMatches.push(matchList[matchIndex]);
+				}
+				if( matchList[matchIndex].radiant_team_id == teamOGId){
+					matchList[matchIndex].isOGDire = false;
 					console.log(matchList[matchIndex]);
 					$scope.OGMatches.push(matchList[matchIndex]);
 				}
