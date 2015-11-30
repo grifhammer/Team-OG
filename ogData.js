@@ -96,9 +96,21 @@ var knownPlayerList = [ [94155156, "Fly"],
 						[94338967, "DkPhobos"],
 						[106809101, "Łîł"],
 						[86772934, "JessieVash"],
+						[89871557, "MuShi-"],
+						[102099826, "DJ"],
+						[21289303, "Black^"],
+						[89249333, "Net"],
+						[86802844, "Ohaiyo"],
+						[91460772, "CeMaTheSlayeR"],
+						[134556694, "Solo"],
+						[106573901, "No[o]ne"],
 						[86802844, "Mag"],
-						[92423451, "Black^"],
-						[86802844, "Ohaiyo"] ];
+						[92423451, "9pashaebashu"],
+						[100175472, "ztok"],
+						[91364275, "『Atún』"],
+						[109455705, "Greedy"],
+						[99796146, "accelgd"],
+						[95825708, "Kotaro"] ];
 
 
 //splice down leagues to just have Frankfurt Major
