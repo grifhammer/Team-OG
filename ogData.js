@@ -65,13 +65,13 @@ var teamOGLeagues = [
 ];
 
 
-var knownPlayerList = [ [94155156, "n0ta1l"],
+var knownPlayerList = [ [94155156, "Fly"],
 						[105248644, "Miracle-"],
 						[25907144, "Crit-"],
-						[19672354, "Moon"],
-						[38628747, "Fly"]];
+						[19672354, "n0ta1l"],
+						[38628747, "Moon"]];
 
-						
+
 //splice down leagues to just have Frankfurt Major
 teamOGLeagues = teamOGLeagues.splice(3,1);
 
