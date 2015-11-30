@@ -31,25 +31,33 @@ OGApp.controller('matchController', function($scope, $http){
 		return steamAPIBaseUrl + getMatchUrl + leagueIdUrl(inputLeagueId);
 	}
 	$http.get(getTeamOGInfoUrl()).success(function(teamData){
-		$scope.teamOG = teamData.result.teams[0];
-		console.log($scope.teamOG)
+		if(teamData = ''){
+			console.log("Got empty team JSON")
+		}else{
+			$scope.teamOG = teamData.result.teams[0];
+			console.log($scope.teamOG)
+		}
 	});
 
 	$scope.OGMatches = []
 	for(var i = 0; i < teamOGLeagues.length; i++){
 		leagueId = teamOGLeagues[i].leagueid;
 		$http.get(buildMatchUrl(leagueId)).success(function(steamData){
-			var matchList = steamData.result.matches;
-			for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
-				if( matchList[matchIndex].dire_team_id == teamOGId){
-					matchList[matchIndex].isOGDire = true;
-					console.log(matchList[matchIndex]);
-					$scope.OGMatches.push(matchList[matchIndex]);
-				}
-				if( matchList[matchIndex].radiant_team_id == teamOGId){
-					matchList[matchIndex].isOGDire = false;
-					console.log(matchList[matchIndex]);
-					$scope.OGMatches.push(matchList[matchIndex]);
+			if(steamData = ""){
+				console.log("Got empty match JSON")
+			}else{
+				var matchList = steamData.result.matches;
+				for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
+					if( matchList[matchIndex].dire_team_id == teamOGId){
+						matchList[matchIndex].isOGDire = true;
+						console.log(matchList[matchIndex]);
+						$scope.OGMatches.push(matchList[matchIndex]);
+					}
+					if( matchList[matchIndex].radiant_team_id == teamOGId){
+						matchList[matchIndex].isOGDire = false;
+						console.log(matchList[matchIndex]);
+						$scope.OGMatches.push(matchList[matchIndex]);
+					}
 				}
 			}
 		});
