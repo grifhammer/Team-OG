@@ -43,6 +43,7 @@ OGApp.controller('matchController', function($scope, $http){
 			for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
 				if( matchList[matchIndex].dire_team_id == teamOGId ||
 					matchList[matchIndex].radiant_team_id == teamOGId){
+					console.log(matchList[matchIndex]);
 					$scope.OGMatches.push(matchList[matchIndex]);
 				}
 			}
