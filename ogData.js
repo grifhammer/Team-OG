@@ -73,8 +73,8 @@ var knownPlayerList = [ [94155156, "Fly"],
 						[87278757, "Puppey"],
 						[43276219, "EternalEnvy"],
 						[86700461, "w33haa"],
-						[87382579], "Misery"],
-						[6922000, "pieliedie"]];
+						[87382579, "Misery"],
+						[6922000, "pieliedie"] ];
 
 
 //splice down leagues to just have Frankfurt Major
