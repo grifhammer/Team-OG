@@ -1,42 +1,42 @@
 $radiantTextColor: #243E36;
-$direTextColor: #CAFFB9;
+$direTextColor: #CC2936;
 $background-color: #7CA982;
 body{
 	background-color: $background-color;
-#site-wrapper{
-	#og-header{
-		h1{
+	#site-wrapper{
+		#og-header{
+			h1{
 
+			}
+			img{
+
+			}
 		}
-		img{
+		.og-match{
+			.side-wrapper{
+				overflow: hidden;
+				.player{
+					float: left;
+					margin: 5px;
+					.player-info{
+						h4{
 
-		}
-	}
-	.og-match{
-		.side-wrapper{
-			overflow: hidden;
-			.player{
-				float: left;
-				margin: 5px;
-				.player-info{
-					h4{
-
+						}
 					}
-				}
-				.hero-image-wrapper{
-					img{
+					.hero-image-wrapper{
+						img{
 
+						}
 					}
 				}
 			}
-		}
-		.radiant{
-			color: $radiantTextColor;
+			.radiant{
+				color: $radiantTextColor;
 
-		}
-		.dire{
-			color: $direTextColor;
+			}
+			.dire{
+				color: $direTextColor;
+			}
 		}
 	}
-}
 }
