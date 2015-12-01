@@ -2,7 +2,7 @@ $radiantTextColor: #243E36;
 $direTextColor: #CC2936;
 $background-color: #7CA982;
 $radiant-match-background: transparentize(#E0EEC6, 0.8);
-$dire-match-background: transparentize(#721121, 0.8);
+$dire-match-background: transparentize(#721121, 0.7);
 body{
 	background-color: $background-color;
 	#site-wrapper{
@@ -27,6 +27,7 @@ body{
 						float: left;
 						margin: 5px;
 						.player-info{
+							max-width: 205px;
 							h4{
 
 							}

@@ -22,13 +22,17 @@ body #site-wrapper .og-match .side-wrapper .player-wrapper .player {
   float: left;
   margin: 5px;
 }
-/* line 42, ../compass/sass/style.scss */
+/* line 29, ../compass/sass/style.scss */
+body #site-wrapper .og-match .side-wrapper .player-wrapper .player .player-info {
+  max-width: 205px;
+}
+/* line 43, ../compass/sass/style.scss */
 body #site-wrapper .og-match .radiant {
   color: #243E36;
   background-color: rgba(224, 238, 198, 0.2);
 }
-/* line 47, ../compass/sass/style.scss */
+/* line 48, ../compass/sass/style.scss */
 body #site-wrapper .og-match .dire {
   color: #CC2936;
-  background-color: rgba(114, 17, 33, 0.2);
+  background-color: rgba(114, 17, 33, 0.3);
 }
