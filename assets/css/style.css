@@ -1,33 +1,36 @@
 /* line 5, ../compass/sass/style.scss */
 body {
-  background-color: #CAFFB9;
+  background-color: #7CA982;
 }
 /* line 16, ../compass/sass/style.scss */
 body #site-wrapper .og-match {
   overflow: hidden;
   margin: 10px auto;
   width: 1075px;
-  background-color: #AEF78E;
 }
-/* line 21, ../compass/sass/style.scss */
+/* line 20, ../compass/sass/style.scss */
 body #site-wrapper .og-match .side-wrapper {
   overflow: hidden;
   float: left;
 }
-/* line 24, ../compass/sass/style.scss */
+/* line 23, ../compass/sass/style.scss */
 body #site-wrapper .og-match .side-wrapper .player-wrapper {
   overflow: hidden;
 }
-/* line 26, ../compass/sass/style.scss */
+/* line 25, ../compass/sass/style.scss */
 body #site-wrapper .og-match .side-wrapper .player-wrapper .player {
   float: left;
   margin: 5px;
 }
-/* line 42, ../compass/sass/style.scss */
+/* line 39, ../compass/sass/style.scss */
+body #site-wrapper .og-match .side-wrapper .player-wrapper .radiant {
+  background-color: #243E36;
+}
+/* line 48, ../compass/sass/style.scss */
 body #site-wrapper .og-match .radiant {
   color: #243E36;
 }
-/* line 46, ../compass/sass/style.scss */
+/* line 52, ../compass/sass/style.scss */
 body #site-wrapper .og-match .dire {
   color: #CC2936;
 }

@@ -1,7 +1,7 @@
 $radiantTextColor: #243E36;
 $direTextColor: #CC2936;
-$background-color: #CAFFB9;
-$match-background: #AEF78E;
+$background-color: #7CA982;
+$match-background: #243E36;
 body{
 	background-color: $background-color;
 	#site-wrapper{
@@ -17,7 +17,6 @@ body{
 			overflow: hidden;
 			margin: 10px auto;
 			width: 1075px;
-			background-color: $match-background;
 			.side-wrapper{
 				overflow: hidden;
 				float: left;
@@ -36,6 +35,13 @@ body{
 
 							}
 						}
+					}
+					.radiant{
+						background-color: $match-background;
+
+					}
+					.dire{
+						
 					}
 				}
 			}
