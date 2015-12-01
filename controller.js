@@ -59,7 +59,7 @@ OGApp.controller('matchController', function($scope, $http){
 	for(var leagueIndex = 0; leagueIndex < teamOGLeagues.length; leagueIndex++){
 		leagueName = teamOGLeagues[leagueIndex].name;
 		leagueId = teamOGLeagues[leagueIndex].leagueid;
-		$http.get(buildMatchUrl(leagueId)).success(function(steamData){
+		$http.get(buildMatchUrl(leagueId)).success(function(steamData, leagueName){
 			if(steamData == ""){
 				console.log("Got empty match JSON")
 			}else{
