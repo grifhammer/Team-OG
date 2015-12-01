@@ -13,19 +13,25 @@ body{
 			}
 		}
 		.og-match{
+			overflow: hidden;
+			margin: auto;
 			.side-wrapper{
 				overflow: hidden;
-				.player{
-					float: left;
-					margin: 5px;
-					.player-info{
-						h4{
+				float: left;
+				.player-wrapper{
+					overflow: hidden;
+					.player{
+						float: left;
+						margin: 5px;
+						.player-info{
+							h4{
 
+							}
 						}
-					}
-					.hero-image-wrapper{
-						img{
+						.hero-image-wrapper{
+							img{
 
+							}
 						}
 					}
 				}
