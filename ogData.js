@@ -114,7 +114,7 @@ var knownPlayerList = [ [94155156, "Fly"],
 
 
 //splice down leagues to just have Frankfurt Major
-teamOGLeagues = teamOGLeagues.splice(3,1);
+// teamOGLeagues = teamOGLeagues.splice(3,1);
 
 var ogMatchIds = [
 1924109491,
