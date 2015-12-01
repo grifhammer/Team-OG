@@ -137,7 +137,12 @@ var knownPlayerList = [ [94155156, "Fly"],
 						[117421467, "SoNNeikO"],
 						[70388657, "Dendi"],
 						[169181898, "Ditya Ra"],
-						[114559048, "Ax.Mo"] ];
+						[114559048, "Ax.Mo"],
+						[100317750, "Era"],
+						[12231202, "Limmp"],
+						[18180970, "Handsken"],
+						[71286125, "Sealkid"],
+						[40209325, "jonassomfan"] ];
 
 
 //splice down leagues to just have Frankfurt Major
