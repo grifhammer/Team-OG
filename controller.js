@@ -36,7 +36,6 @@ OGApp.controller('matchController', function($scope, $http){
 		var indexEnd = 9;
 		for(var playerIndex = indexStart; playerIndex <= indexEnd; playerIndex++){
 			var currPlayer = match.players[playerIndex];
-			console.log(currPlayer);
 			for(var i = 0; i < knownPlayerList.length; i++){
 				if(currPlayer.account_id == knownPlayerList[i][0]){
 					match.players[playerIndex].account_id = knownPlayerList[i][1];
@@ -51,7 +50,6 @@ OGApp.controller('matchController', function($scope, $http){
 			console.log("Got empty team JSON")
 		}else{
 			$scope.teamOG = teamData.result.teams[0];
-			console.log($scope.teamOG)
 		}
 	});
 
