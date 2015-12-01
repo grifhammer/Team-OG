@@ -1,64 +1,64 @@
 var teamOGLeagues = [
 {
-	name: "#DOTA_Item_ASUS_ROG_DreamLeague_Season_4",
+	name: "ASUS ROG DreamLeague Season 4",
 	leagueid: 3865,
-	description: "#DOTA_Item_Desc_ASUS_ROG_DreamLeague_Season_4",
+	description: "Desc_ASUS_ROG_DreamLeague_Season_4",
 	tournament_url: "http://dreamleague.dreamhack.se/",
 	itemdef: 16737
 },
 {
-	name: "#DOTA_Item_The_Summit_4",
+	name: "The Summit 4",
 	leagueid: 3781,
-	description: "#DOTA_Item_Desc_The_Summit_4",
+	description: "Desc_The_Summit_4",
 	tournament_url: "beyondthesummit.tv",
 	itemdef: 16738
 },
 {
-	name: "#DOTA_Item_The_Defense_Season_5",
+	name: "The Defense Season 5",
 	leagueid: 3534,
-	description: "#DOTA_Item_Desc_The_Defense_Season_5",
+	description: "Desc_The_Defense_Season_5",
 	tournament_url: "http://www.the-defense.com/",
 	itemdef: 16722
 },
 {
-	name: "#DOTA_Item_Frankfurt_Major_2015",
+	name: "Frankfurt Major 2015",
 	leagueid: 3671,
-	description: "#DOTA_Item_Desc_Frankfurt_Major_2015",
+	description: "Desc_Frankfurt_Major_2015",
 	tournament_url: "",
 	itemdef: 16731
 },
 {
-	name: "#DOTA_Item_D2CL_Season_6",
+	name: "D2CL Season 6",
 	leagueid: 3726,
-	description: "#DOTA_Item_Desc_D2CL_Season_6",
+	description: "Desc_D2CL_Season_6",
 	tournament_url: "http://d2cl.org",
 	itemdef: 16395
 },
 {
-	name: "#DOTA_Item_StarLadder__iLeague",
+	name: "StarLadder iLeague",
 	leagueid: 3902,
-	description: "#DOTA_Item_Desc_StarLadder__iLeague",
+	description: "Desc_StarLadder__iLeague",
 	tournament_url: "http://live.starladder.tv",
 	itemdef: 16736
 },
 {
-	name: "#DOTA_Item_MLG_World_Finals_2015",
+	name: "MLG World Finals 2015",
 	leagueid: 2392,
-	description: "#DOTA_Item_Desc_MLG_World_Finals_2015",
+	description: "Desc_MLG_World_Finals_2015",
 	tournament_url: "http://www.majorleaguegaming.com/finals",
 	itemdef: 16394
 },
 {
-	name: "#DOTA_Item_Nanyang_Championships",
+	name: "Nanyang Championships",
 	leagueid: 3502,
-	description: "#DOTA_Item_Desc_Nanyang_Championships",
+	description: "Desc_Nanyang_Championships",
 	tournament_url: "http://www.nanyangcup.cn/",
 	itemdef: 16695
 },
 {
-	name: "#DOTA_Item_World_Cyber_Arena_2015",
+	name: "World Cyber Arena 2015",
 	leagueid: 2922,
-	description: "#DOTA_Item_Desc_World_Cyber_Arena_2015",
+	description: "Desc_World_Cyber_Arena_2015",
 	tournament_url: "http://www.wca.com.cn",
 	itemdef: 16470
 }
