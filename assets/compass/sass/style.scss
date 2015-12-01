@@ -1,6 +1,7 @@
 $radiantTextColor: #243E36;
 $direTextColor: #CC2936;
-$background-color: #7CA982;
+$background-color: #CAFFB9;
+$match-background: #AEF78E;
 body{
 	background-color: $background-color;
 	#site-wrapper{
@@ -14,7 +15,9 @@ body{
 		}
 		.og-match{
 			overflow: hidden;
-			margin: auto;
+			margin: 10px auto;
+			width: 1075px;
+			background-color: $match-background;
 			.side-wrapper{
 				overflow: hidden;
 				float: left;
