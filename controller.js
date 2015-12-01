@@ -56,8 +56,9 @@ OGApp.controller('matchController', function($scope, $http){
 	});
 
 	$scope.OGMatches = []
-	for(var i = 0; i < teamOGLeagues.length; i++){
-		leagueId = teamOGLeagues[i].leagueid;
+	var leagueIndex;
+	for(var leagueIndex = 0; leagueIndex < teamOGLeagues.length; leagueIndex++){
+		leagueId = teamOGLeagues[leagueIndex].leagueid;
 		$http.get(buildMatchUrl(leagueId)).success(function(steamData){
 			if(steamData == ""){
 				console.log("Got empty match JSON")
@@ -66,12 +67,12 @@ OGApp.controller('matchController', function($scope, $http){
 				for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
 					if( matchList[matchIndex].dire_team_id == teamOGId){
 						matchList[matchIndex].isOGDire = true;
-						matchList[matchIndex].leagueName = teamOGLeagues[i].name;
+						matchList[matchIndex].leagueName = teamOGLeagues[leagueIndex].name;
 						$scope.OGMatches.push(changePlayerNames(matchList[matchIndex]));
 					}
 					if( matchList[matchIndex].radiant_team_id == teamOGId){
 						matchList[matchIndex].isOGDire = false;
-						matchList[matchIndex].leagueName = teamOGLeagues[i].name;
+						matchList[matchIndex].leagueName = teamOGLeagues[leagueIndex].name;
 						$scope.OGMatches.push(changePlayerNames(matchList[matchIndex]));
 					}
 				}
