@@ -59,26 +59,26 @@ OGApp.controller('matchController', function($scope, $http){
 	for(var leagueIndex = 0; leagueIndex < teamOGLeagues.length; leagueIndex++){
 		leagueName = teamOGLeagues[leagueIndex].name;
 		leagueId = teamOGLeagues[leagueIndex].leagueid;
-		$http.get(buildMatchUrl(leagueId)).success(function(leaguName){
+		$http.get(buildMatchUrl(leagueId)).success(function(leagueName){
 			return function(steamData){
-			if(steamData == ""){
-				console.log("Got empty match JSON")
-			}else{
-				var matchList = steamData.result.matches;
-				for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
-					if( matchList[matchIndex].dire_team_id == teamOGId){
-						matchList[matchIndex].isOGDire = true;
-						matchList[matchIndex].leagueName = leagueName;
-						$scope.OGMatches.push(changePlayerNames(matchList[matchIndex]));
-					}
-					if( matchList[matchIndex].radiant_team_id == teamOGId){
-						matchList[matchIndex].isOGDire = false;
-						matchList[matchIndex].leagueName = leagueName;
-						$scope.OGMatches.push(changePlayerNames(matchList[matchIndex]));
+				if(steamData == ""){
+					console.log("Got empty match JSON")
+				}else{
+					var matchList = steamData.result.matches;
+					for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
+						if( matchList[matchIndex].dire_team_id == teamOGId){
+							matchList[matchIndex].isOGDire = true;
+							matchList[matchIndex].leagueName = leagueName;
+							$scope.OGMatches.push(changePlayerNames(matchList[matchIndex]));
+						}
+						if( matchList[matchIndex].radiant_team_id == teamOGId){
+							matchList[matchIndex].isOGDire = false;
+							matchList[matchIndex].leagueName = leagueName;
+							$scope.OGMatches.push(changePlayerNames(matchList[matchIndex]));
+						}
 					}
 				}
 			}
-		}
 		}(leagueName));
 	};
 
