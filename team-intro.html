@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="teamApp">
+<head>
+	<title>About OG Dota2</title>
+</head>
+<body>
+	<div id="site-wrapper">
+		<div id="players">
+			<div class="player" ng-repeat="player in playerList">
+				<div class="player-profile-image">
+					<img ng-src="{{player.picture}}">
+					<h3>{{player.name}}</h3>
+					<h3>{{player.tag}}</h3>
+				</div>
+				<div class="play-game-information">
+					<h4>{{player.role}}</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

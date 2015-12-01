@@ -34,8 +34,11 @@ OGApp.controller('matchController', function($scope, $http){
 	function changePlayerNames(match){
 		var indexStart = 0;
 		var indexEnd = 9;
+		//Loop through players list
 		for(var playerIndex = indexStart; playerIndex <= indexEnd; playerIndex++){
+			// create new variable to store current player
 			var currPlayer = match.players[playerIndex];
+			//Loop through list of known players and if found replace the account_id with player name
 			for(var i = 0; i < knownPlayerList.length; i++){
 				if(currPlayer.account_id == knownPlayerList[i][0]){
 					match.players[playerIndex].account_id = knownPlayerList[i][1];
@@ -45,6 +48,7 @@ OGApp.controller('matchController', function($scope, $http){
 		}
 		return match;
 	}
+	// Make API call to get the information for team OG and store it in the teamOG scope variable
 	$http.get(getTeamOGInfoUrl()).success(function(teamData){
 		if(teamData == ''){
 			console.log("Got empty team JSON")
@@ -53,6 +57,8 @@ OGApp.controller('matchController', function($scope, $http){
 		}
 	});
 
+
+	//loop through list of leagues that OG is playing in and make API calls to get matches they ar ein
 	$scope.OGMatches = []
 	for(var leagueIndex = 0; leagueIndex < teamOGLeagues.length; leagueIndex++){
 		leagueName = teamOGLeagues[leagueIndex].name;
@@ -63,6 +69,8 @@ OGApp.controller('matchController', function($scope, $http){
 					console.log("Got empty match JSON")
 				}else{
 					var matchList = steamData.result.matches;
+					// Loop through returned matches and find if OG in the match
+					// If so record whether they were dire set the name of the league and push it onto the matches array
 					for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
 						if( matchList[matchIndex].dire_team_id == teamOGId){
 							matchList[matchIndex].isOGDire = true;
