@@ -1,8 +1,8 @@
 $radiantTextColor: #243E36;
 $direTextColor: #CC2936;
 $background-color: #7CA982;
-$radiant-match-background: transparentize(#E0EEC6, 80%);
-$dire-match-background: transparentize(#721121, 80%);
+$radiant-match-background: transparentize(#E0EEC6, 0.8);
+$dire-match-background: transparentize(#721121, 0.8);
 body{
 	background-color: $background-color;
 	#site-wrapper{
