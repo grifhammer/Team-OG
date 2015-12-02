@@ -43,8 +43,9 @@ body #site-wrapper .og-match .dire {
 /* line 55, ../compass/sass/style.scss */
 body #site-wrapper #players {
   overflow: hidden;
+  text-align: center;
 }
-/* line 57, ../compass/sass/style.scss */
+/* line 58, ../compass/sass/style.scss */
 body #site-wrapper #players .player {
   float: left;
   width: 17%;
