@@ -51,5 +51,24 @@ body{
 				background-color: $dire-match-background;
 			}
 		}
+
+		#players{
+			overflow: hidden;
+			.player{
+				float: left;
+
+				.player-profile-image{
+					img{
+
+					}
+					h3{
+
+					}
+				}
+				.play-game-information{
+
+				}
+			}
+		}
 	}
 }
