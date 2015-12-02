@@ -47,4 +47,7 @@ body #site-wrapper #players {
 /* line 57, ../compass/sass/style.scss */
 body #site-wrapper #players .player {
   float: left;
+  width: 17%;
+  min-width: 150px;
+  margin: 10px 5px;
 }

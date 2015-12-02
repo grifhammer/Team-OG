@@ -56,7 +56,9 @@ body{
 			overflow: hidden;
 			.player{
 				float: left;
-
+				width: 17%;
+				min-width: 150px;
+				margin: 10px 5px;
 				.player-profile-image{
 					img{
 
