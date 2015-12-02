@@ -72,6 +72,9 @@ OGApp.controller('matchController', function($scope, $http){
 					// Loop through returned matches and find if OG in the match
 					// If so record whether they were dire set the name of the league and push it onto the matches array
 					for(var matchIndex = 0; matchIndex < matchList.length; matchIndex++){
+						if(matchList[matchIndex].match_id == 1923609014 || matchList[matchIndex].match_id == 1923412583){
+							matchIndex++;
+						}
 						if( matchList[matchIndex].dire_team_id == teamOGId){
 							matchList[matchIndex].isOGDire = true;
 							matchList[matchIndex].leagueName = leagueName;
