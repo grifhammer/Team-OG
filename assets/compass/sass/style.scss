@@ -5,6 +5,7 @@ $radiant-match-background: transparentize(#E0EEC6, 0.8);
 $dire-match-background: transparentize(#721121, 0.7);
 body{
 	background-color: $background-color;
+	font-family: 'Roboto Condensed', Tahoma, Arial, sans-serif;
 	#site-wrapper{
 		#og-header{
 			text-align: center;

@@ -1,51 +1,52 @@
 /* line 6, ../compass/sass/style.scss */
 body {
   background-color: #7CA982;
+  font-family: 'Roboto Condensed', Tahoma, Arial, sans-serif;
 }
-/* line 9, ../compass/sass/style.scss */
+/* line 10, ../compass/sass/style.scss */
 body #site-wrapper #og-header {
   text-align: center;
 }
-/* line 18, ../compass/sass/style.scss */
+/* line 19, ../compass/sass/style.scss */
 body #site-wrapper .og-match {
   overflow: hidden;
   margin: 10px auto;
   width: 1075px;
 }
-/* line 22, ../compass/sass/style.scss */
+/* line 23, ../compass/sass/style.scss */
 body #site-wrapper .og-match .side-wrapper {
   overflow: hidden;
   float: left;
 }
-/* line 25, ../compass/sass/style.scss */
+/* line 26, ../compass/sass/style.scss */
 body #site-wrapper .og-match .side-wrapper .player-wrapper {
   overflow: hidden;
 }
-/* line 27, ../compass/sass/style.scss */
+/* line 28, ../compass/sass/style.scss */
 body #site-wrapper .og-match .side-wrapper .player-wrapper .player {
   float: left;
   margin: 5px;
 }
-/* line 30, ../compass/sass/style.scss */
+/* line 31, ../compass/sass/style.scss */
 body #site-wrapper .og-match .side-wrapper .player-wrapper .player .player-info {
   max-width: 205px;
 }
-/* line 44, ../compass/sass/style.scss */
+/* line 45, ../compass/sass/style.scss */
 body #site-wrapper .og-match .radiant {
   color: #243E36;
   background-color: rgba(224, 238, 198, 0.2);
 }
-/* line 49, ../compass/sass/style.scss */
+/* line 50, ../compass/sass/style.scss */
 body #site-wrapper .og-match .dire {
   color: #CC2936;
   background-color: rgba(114, 17, 33, 0.3);
 }
-/* line 55, ../compass/sass/style.scss */
+/* line 56, ../compass/sass/style.scss */
 body #site-wrapper #players {
   overflow: hidden;
   text-align: center;
 }
-/* line 58, ../compass/sass/style.scss */
+/* line 59, ../compass/sass/style.scss */
 body #site-wrapper #players .player {
   float: left;
   width: 17%;
